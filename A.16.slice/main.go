@@ -6,10 +6,12 @@ func main() {
 	fmt.Println("SLICE")
 	fmt.Println("-----")
 
+	// INISIALISASI SLICE
 	var fruits = []string{"apple", "grape", "banana", "melon"}
 	fmt.Println(fruits)
 	fmt.Println(fruits[0])
 
+	// HUBUNGAN SLICE DENGAN ARRAY & OPERASI SLICE
 	fmt.Println(fruits[0:2])
 	fmt.Println(fruits[0:3])
 	fmt.Println(fruits[0:0])
@@ -24,6 +26,7 @@ func main() {
 	var newSliceArrFruits = arrFruits[0:1]
 	fmt.Println(newSliceArrFruits)
 
+	// SLICE SEBAGAI TIPE DATA REFERENCE
 	fmt.Println("-----")
 	var aFruits = fruits[0:3]
 	var bFruits = fruits[1:4]
@@ -45,6 +48,7 @@ func main() {
 	fmt.Println(aaFruits)
 	fmt.Println(bbFruits)
 
+	// FUNGSI LEN DAN CAP
 	fmt.Println("-----")
 	fmt.Println("len fruits", len(fruits))
 	fmt.Println("cap fruits", cap(fruits))
@@ -53,6 +57,7 @@ func main() {
 	fmt.Println("len bFruits", len(bFruits))
 	fmt.Println("cap bFruits", cap(bFruits))
 
+	// FUNGSI APPEND
 	fmt.Println("-----")
 	var cFruits = append(fruits, "papaya")
 	fmt.Println(fruits)
@@ -64,6 +69,7 @@ func main() {
 	fmt.Println(bFruits)
 	fmt.Println(eFruits)
 
+	// FUNGSI COPY
 	fmt.Println("-----")
 	dst := make([]string, 6)
 	src := []string{"apple", "banana", "watermelon", "papaya"}
@@ -73,6 +79,7 @@ func main() {
 	fmt.Println(src)
 	fmt.Println(n)
 
+	// AKSES SLICE DENGAN 3 INDEKS
 	fmt.Println("-----")
 	var nFruits = fruits[0:2]
 	var mFruits = fruits[0:2:4]
