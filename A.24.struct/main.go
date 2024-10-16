@@ -23,6 +23,22 @@ type manager struct {
 	grade int
 }
 
+type admin struct {
+	person struct {
+		name string
+		age  int
+	}
+	grade   int
+	hobbies []string
+}
+
+// type person1 struct {
+// 	name string `tag1`
+// 	age  int    `tag2`
+// }
+
+type people = person
+
 func main() {
 	fmt.Println("STRUCT")
 
@@ -142,4 +158,40 @@ func main() {
 
 	// DEKLARASI ANONYMOUS STRUCT DENGAN KEYWORD VAR
 	fmt.Println("------")
+	var student3 struct {
+		person
+		grade int
+	}
+
+	student3.person = person{"wick", 21}
+	student3.grade = 2
+	fmt.Println(student3)
+
+	// NESTED STRUCT
+	fmt.Println("------")
+	var admin1 = admin{}
+	admin1.person.name = "Wick"
+	admin1.person.age = 21
+	admin1.grade = 9
+	admin1.hobbies = []string{"running"}
+	fmt.Println(admin1)
+
+	// DEKLARASI DAN INISIALISASI STRUCT SECARA HORIZONTAL
+	// fmt.Println("------")
+	// var b1 = struct { name string; age int }{ age: 22, name: "wick" }
+	// fmt.Println(b1)
+
+	// TAG PROPERTY DALAM STRUCT
+	// fmt.Println("------")
+	// var c1 = person1{}
+	// c1.name = "Son Goku"
+	// c1.age = 1000
+	// fmt.Println(c1)
+
+	// TYPE ALIAS
+	fmt.Println("------")
+	var d1 = people{"WIc", 23}
+	fmt.Println(d1)
+	fmt.Println(people(d1))
+	fmt.Println(person(d1))
 }
